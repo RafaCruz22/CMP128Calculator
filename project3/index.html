@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head> 
+        <!-- 
+        Author: Rafael De La Cruz 
+        Date: 12/04/2021
+        Class: CMP 128 (Intro to Web Development)
+        Assignment: Project 3
+        -->
+        <title>Calculator</title>
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+
+    <body> 
+        <!-- main calculator container -->
+        <div class="calculator">
+            <!-- display box for displaying math results and user entries -->
+            <div id="display"> </div>
+          
+            <!-- operator container -->
+            <div id="operators"> 
+                <div onclick="addOperatorToDisplay(this)">&plus;</div>
+                <div onclick="addOperatorToDisplay(this)">&minus;</div>
+                <div onclick="addOperatorToDisplay(this)">&times;</div>
+                <div onclick="addOperatorToDisplay(this)">&divide;</div>
+            </div>
+
+            <!-- container for digits, decimal, clear, and equal button -->
+            <!-- uses onclick event handling to pass the information of the 
+                button that was clicked to display on the display box -->
+            <div id="entries" > 
+                <div class=button >
+                    <div onclick="addNumberToDisplay(this)">7</div>
+                    <div onclick="addNumberToDisplay(this)">4</div>
+                    <div onclick="addNumberToDisplay(this)">1</div>
+                    <div onclick="addNumberToDisplay(this)">0</div>
+                </div>
+
+                <div class=button>
+                    <div onclick="addNumberToDisplay(this)">8</div>
+                    <div onclick="addNumberToDisplay(this)">5</div>
+                    <div onclick="addNumberToDisplay(this)">2</div>
+                    <div onclick="addNumberToDisplay(this)">.</div>
+                </div>
+
+                <div class=button>
+                    <div onclick="addNumberToDisplay(this)">9</div>
+                    <div onclick="addNumberToDisplay(this)">6</div>
+                    <div onclick="addNumberToDisplay(this)">3</div>
+                    <div onclick="clearDisplay(this)">C</div>
+                </div>
+
+                <div class=equalButton>
+                    <div onclick="evaluateDisplay(this)">&equals;</div>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+
+    <script src="./calcJS.js"></script>
+
+</html>
